@@ -9,11 +9,10 @@
 </div>
 
   <h2>Jobs</h2>
+ {{ show_jobs(jobs) }}
 
   <h2>Reviews</h2>
-    {# TODO: Remove comment and add for loop
-      {% %}
-    #}
+    {% for review in reviews %}
     <div class="box">
       <article class="media">
         <div class="media-left">
@@ -24,9 +23,7 @@
         </div>
       </article>
     </div>
-    {# TODO: Remove comment and end for loop
-      {% %}
-    #}
+    {% endfor %}
   <div class="columns">
     <div class="column">
       <a class="button is-info is-pulled-right">Create Review</a>
